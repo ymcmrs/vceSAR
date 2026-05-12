@@ -1,5 +1,4 @@
-# PySME
-Stochastic Model Estimation for InSAR/TS-InSAR observations or measurements.
+# vceSAR
+A python toolbox for time-series InSAR stochastic modeling.
 
-1. Estimate the variance covariane components for InSAR and TS-InSAR measurements or observations.
-2. Estimate the InSAR parameters incorporating the estimated stochastic model.
+
