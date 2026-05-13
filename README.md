@@ -65,7 +65,7 @@ Download the development version using git:
             vce_sar.py variogramStack.h5 
 
 
-3) Modeling the spatial variance components for SAR images one by one using #vce_modeling.py
+3) Modeling the spatial variance components for SAR images one by one using [#vce_modeling.py]
    
     Usage:
             vce_modeling.py variogramTs.h5 
