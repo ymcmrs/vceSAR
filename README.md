@@ -46,7 +46,7 @@ Download the development version using git:
 
 ### 2 Running vceSAR
 
-1). Calculate variogram of short-temporal baseline interferograms using #vce_ifg.py. 
+1). Calculate variogram of short-temporal baseline interferograms using vce_ifg.py. 
 
     Usage:
             vce_ifg.py ifgramStack.h5 --parallel 4
@@ -58,21 +58,34 @@ Download the development version using git:
             vce_ifg.py timeseries.h5 -m maskTempCoh.h5 --bin_numb 30
 
 
-2) Estimate of the variance components for time-series of SAR images using #vce_SAR.py
+2) Estimate of the variance components for time-series of SAR images using vce_SAR.py
 
     Usage:
             vce_sar.py variogramStack.h5 --weight
             vce_sar.py variogramStack.h5 
 
 
-3) Modeling the spatial variance components for SAR images one by one using [#vce_modeling.py]
+3) Modeling the spatial variance components for SAR images one by one using vce_modeling.py
    
     Usage:
             vce_modeling.py variogramTs.h5 
             vce_modeling.py variogramStack.h5 --model gaussian
             vce_modeling.py variogramTs.h5 --max-length 150 --model spherical
 
+# For all case of the applications, we recommend to estimate the time-series firstly, then using ifgram_reconstruction_vceSAR.py to regenerate interferograms 
+(e.g., for co-sesimic cases, we regenerate interferogram network before and after earthquake seperately, to avoid the effects of deformations on calculating interferogram-variograms).
 
+example:
+  ifgram_reconstruction_nvce.py  timeseries.h5  -n 2
+  ifgram_reconstruction_nvce.py  timeseries_ECWMF_ramp_demErr.h5  
+
+### 3 Citations
+
+ If you use our toolbox or if you find our research helpful, please cite the following papers (thanks for your support):
+ 
+ [1] Cao, Y., Li, Z., et al. (2018). Stochastic modeling for time series InSAR: with emphasis on atmospheric effects. Journal of Geodesy, doi:10.1007/s00190-017-1055-5 
+ [2] Li, Z., Cao, Y., Wei, J., et al. (2019). Time-series InSAR ground deformation monitoring: Atmospheric delay modeling and estimating. Earth-Science Reviews, doi:10.1016/j.earscirev.2019.03.008
+ [3] Cao, Y., Hamling, I., Li, Z., Rollins, C. (2025). Robust variance-covariance estimation of tropospheric turbulence improves InSAR capability for monitoring of small tectonic displacements. ISPRS Journal of Photogrammetry and Remote Sensing, doi:10.1016/j.isprsjprs.2025.04.028
 
 
 
