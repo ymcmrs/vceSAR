@@ -46,7 +46,36 @@ Download the development version using git:
 
 ### 2 Running vceSAR
 
-1). Calculate variogram of short
+1). Calculate variogram of short-temporal baseline interferograms using #vce_ifg.py. 
+
+    Usage:
+            vce_ifg.py ifgramStack.h5 --parallel 4
+            vce_ifg.py ifgramStack.h5 -m maskTempCoh.h5 --sample_numb 5000
+            vce_ifg.py ifgramStack.h5 -m maskTempCoh.h5 --bin_numb 30
+            
+            vce_ifg.py timeseries.h5 --parallel 8
+            vce_ifg.py timeseries.h5 --bin_numb 20
+            vce_ifg.py timeseries.h5 -m maskTempCoh.h5 --bin_numb 30
+
+
+2) Estimate of the variance components for time-series of SAR images using #vce_SAR.py
+
+    Usage:
+            vce_sar.py variogramStack.h5 --weight
+            vce_sar.py variogramStack.h5 
+
+
+3) Modeling the spatial variance components for SAR images one by one using #vce_modeling.py
+   
+    Usage:
+            vce_modeling.py variogramTs.h5 
+            vce_modeling.py variogramStack.h5 --model gaussian
+            vce_modeling.py variogramTs.h5 --max-length 150 --model spherical
+
+
+
+
+
 
 
 
