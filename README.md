@@ -77,7 +77,7 @@ Download the development version using git:
 
 example:
   ifgram_reconstruction_nvce.py  timeseries.h5  -n 2
-  ifgram_reconstruction_nvce.py  timeseries_ECWMF_ramp_demErr.h5  
+  ifgram_reconstruction_nvce.py  timeseries_ECWMF_ramp_demErr.h5 
 
 ### 3 Citations
 
