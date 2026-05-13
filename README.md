@@ -7,7 +7,7 @@ An open source module in python for time-series InSAR stochastic modeling and un
 
 The application of vceSAR falls into two scenarios: temporary deformation case (e.g., co-seismic) and slow-moving deformation case (e.g., tectonic movements or general ground subsidence). For temporary case, we estimate variance components of SAR images before and after the event seperately; For slow-moving cases, we estimate the variance components for all SAR images directly (at one time).
 
-The currently version of vceSAR is developed based on MintPy products, but the basic angorithms are suitable for both SBAS and PS/DS measurements, it also can be easily merged into any other softwares of InSAR time-series analysis, e.g., StamPS. 
+The currently version of vceSAR is developed based on MintPy products, but the basic angorithms are suitable for both SBAS and PS/DS measurements, it also can be easily merged into any other softwares of InSAR time-series analysis, e.g., StaMPS. 
 
 This is research code provided to you "as is" with NO WARRANTIES OF CORRECTNESS. Use at your own risk.
 
