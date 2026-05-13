@@ -40,6 +40,7 @@ Download the development version using git:
     
  2） Install dependencies
     
+    $CONDA_PREFIX/bin/conda install -c conda-forge mintpy
     $CONDA_PREFIX/bin/pip install git+https://github.com/ymcmrs/PyKrige.git   
     
 
