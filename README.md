@@ -1,4 +1,50 @@
+[![Language](https://img.shields.io/badge/python-3.5%2B-blue.svg)](https://www.python.org/)
+[![Citation](https://img.shields.io/badge/doi-10.1016%2Fj.jgr.solidearth.2020JB020952-blue)](https://doi.org/10.1029/2020JB020952)
+
 # vceSAR
-A python toolbox for time-series InSAR stochastic modeling.
+
+An open source module in python for time-series InSAR stochastic modeling and uncertainty evaluation. We estimate and model the variance components of the absolute tropospheric effects on SAR images based on geostatistic and variance-covariance-estimation (VCE) approach. Before applying this module, we recommend users to correct topo-corelated and large-scale tropospheric delay in interferograms or InSAR time-series firstly based on global weather models (e.g., ICAMS, GACOS or PyAPS).  Basically this module is developed for "troposphere", but we should note that here the "troposphere" actually means the sum of all "spatial-correlated errors" that are not corrected (e.g., residual orbital errors, residual topo-phases, or potential ionospheric delays, etc), of course, tropospheric delay, particularly the turbulent component, is always the dominant one. 
+
+The currently version of vceSAR is developed based on MintPy products, but the basic angorithms are suitable for both SBAS and PS/DS measurements, it also can be easily merged into any other softwares of InSAR time-series analysis, e.g., StamPS. 
+
+This is research code provided to you "as is" with NO WARRANTIES OF CORRECTNESS. Use at your own risk.
+
+### 1 Download
+
+Download the development version using git:   
+   
+    cd ~/python
+    git clone https://github.com/ymcmrs/vceSAR
+    
+    
+### 2 Installation
+
+ 1） To make vceSAR importable in python, by adding the path vceSAR directory to your $PYTHONPATH
+     For csh/tcsh user, add to your **_~/.cshrc_** file for example:   
+
+    ############################  Python  ###############################
+    if ( ! $?PYTHONPATH ) then
+        setenv PYTHONPATH ""
+    endif
+    
+    ##--------- Anaconda ---------------## 
+    setenv PYTHON3DIR    ~/python/anaconda3
+    setenv PATH          ${PATH}:${PYTHON3DIR}/bin
+    
+    ##--------- PyINT ------------------## 
+    setenv VCESAR_HOME    ~/python/vceSAR      
+    setenv PYTHONPATH    ${PYTHONPATH}:${VCESAR_HOME}
+    setenv PATH          ${PATH}:${VCESAR_HOME}/vceSAR
+    
+ 2） Install dependencies
+    
+    $CONDA_PREFIX/bin/pip install git+https://github.com/ymcmrs/PyKrige.git   
+    
+
+### 2 Running vceSAR
+
+1). Calculate variogram of short
+
+
 
 
