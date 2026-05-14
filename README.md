@@ -72,6 +72,12 @@ Download the development version using git:
             vce_modeling.py variogramStack.h5 --model gaussian
             vce_modeling.py variogramTs.h5 --max-length 150 --model spherical
 
+4). Calculaitng the spatio-temporal variance components for time-series SAR using vce_tsinsar.py.
+
+    Usage:
+            vce_tsinsar.py variogramTsModel.h5 
+            vce_tsinsar.py variogramTsModel.h5 -o varianceTs.h5 
+
 #### For all case of the applications, we recommend to estimate the time-series firstly, then using ifgram_reconstruction_vceSAR.py to regenerate interferograms. 
 (e.g., for co-sesimic cases, we regenerate interferogram network before and after earthquake seperately, to avoid the effects of deformations on calculating interferogram-variograms).
 
