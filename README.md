@@ -82,8 +82,9 @@ Download the development version using git:
 (e.g., for co-sesimic cases, we can reconstruct the interferograms based on time-series using the regenerated interferogram-network before and after earthquake seperately, i, to avoid the effects of co-seismic deformations on calculating interferogram-variograms; ii, to reduce computation burden).
 
     Example:
-            ifgram_reconstruction_nvce.py  timeseries.h5  -n 2
-            ifgram_reconstruction_nvce.py  timeseries_icamsCor_demErr.h5 
+            ifgram_reconstruction_nvce.py  timeseries_icamsCor_demErr.h5 -ex [remove all post-seismic SAR dates] -o ifgramStack_before.h5
+            ifgram_reconstruction_nvce.py  timeseries_icamsCor_demErr.h5 -ex [remove all before-seismic SAR dates] -o ifgramStack_post.h5
+            ifgram_reconstruction_nvce.py  timeseries_icamsCor_demErr.h5 -n 2 -o ifgramStack_icamsCor_Conn2.h5
 
 ### 3 Citations
 
