@@ -79,11 +79,11 @@ Download the development version using git:
             vce_tsinsar.py variogramTsModel.h5 -o varianceTs.h5 
 
 #### For all case of the applications, we recommend to estimate the time-series firstly, then using ifgram_reconstruction_vceSAR.py to regenerate interferograms. 
-(e.g., for co-sesimic cases, we regenerate interferogram network before and after earthquake seperately, to avoid the effects of deformations on calculating interferogram-variograms).
+(e.g., for co-sesimic cases, we can reconstruct the interferograms based on time-series using the regenerated interferogram-network before and after earthquake seperately, i, to avoid the effects of co-seismic deformations on calculating interferogram-variograms; ii, to reduce computation burden).
 
     Example:
             ifgram_reconstruction_nvce.py  timeseries.h5  -n 2
-            ifgram_reconstruction_nvce.py  timeseries_ECWMF_ramp_demErr.h5 
+            ifgram_reconstruction_nvce.py  timeseries_icamsCor_demErr.h5 
 
 ### 3 Citations
 
