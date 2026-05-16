@@ -63,22 +63,22 @@ Download the development version using git:
 2). Estimate of the variance components for time-series of SAR images using vce_SAR.py.
 
     Usage:
-            vce_sar.py variogramStack.h5 --weight
-            vce_sar.py variogramStack.h5 
+            vce_sar.py varianceStack.h5 --weight
+            vce_sar.py varianceStack.h5 
 
 
 3). Modeling the spatial variance components for SAR images one by one using vce_modeling.py.
 
     Usage:
-            vce_modeling.py variogramTs.h5 
-            vce_modeling.py variogramStack.h5 --model gaussian
-            vce_modeling.py variogramTs.h5 --max-length 150 --model spherical
+            vce_modeling.py varianceTs.h5 
+            vce_modeling.py varianceStack.h5 --model gaussian
+            vce_modeling.py vvarianceTs.h5 --max-length 150 --model spherical
 
 4). Calculaitng the spatio-temporal variance components for time-series SAR using vce_tsinsar.py.
 
     Usage:
-            vce_tsinsar.py variogramTsModel.h5 
-            vce_tsinsar.py variogramTsModel.h5 -o varianceTs.h5 
+            vce_tsinsar.py varianceTsModel.h5 
+            vce_tsinsar.py varianceTsModel.h5 -o varianceTs3D.h5 
 
 #### For all case of the applications, we recommend to estimate the time-series firstly, then using ifgram_reconstruction_vceSAR.py to regenerate interferograms. 
 (e.g., for co-sesimic cases, we can reconstruct the interferograms based on time-series using the regenerated interferogram-network before and after earthquake seperately, i, to avoid the effects of co-seismic deformations on calculating interferogram-variograms; ii, to reduce computation burden).
