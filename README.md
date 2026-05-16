@@ -1,5 +1,6 @@
 [![Language](https://img.shields.io/badge/python-3.5%2B-blue.svg)](https://www.python.org/)
 [![Citation](https://img.shields.io/badge/doi-10.1007%2FJoG.Cao2018-blue)](https://doi.org/10.1007/s00190-017-1055-5)
+[![Citation](https://img.shields.io/badge/doi-10.1016%2Fj.isprsjprs.2025.04.028-blue)]((https://doi.org/10.1016/j.isprsjprs.2025.04.028)
 
 
 # vceSAR
